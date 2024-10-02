@@ -34,7 +34,7 @@ class ChatController{
             });
 
             const result = await chatSession.sendMessage(prompt);
-            return res.status(200).json({ success: true, message: result.response.text() });
+            return res.status(200).json({ success: true, message: result.response.text(), headers: {"Access-Control-Allow-Origin":"*"} });
 
         } catch (error) {
             console.log(error)
