@@ -7,9 +7,7 @@ const port = process.env.PORT || 5001;
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-app.use(cors({
-    origin: "*"
-}));
+app.use(cors());
 // app.use(function (req, res, next) {
 //   res.setHeader("Access-Control-Allow-Origin", "*"); // Replace with your domain
 //   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
